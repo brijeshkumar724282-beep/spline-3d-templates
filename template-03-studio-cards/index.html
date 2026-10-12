@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Cards | Spline Portfolio Template</title>
+  <meta name="description" content="Studio Cards is a Spline focused portfolio template for freelancers who want to show interactive work fast.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1/build/spline-viewer.js"></script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap navin">
+      <a class="brand" href="../index.html" aria-label="Back to template hub">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Studio Cards</span>
+      </a>
+      <nav class="links" id="navLinks" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="back" href="../index.html">Back to hub</a>
+        <a class="btn small" href="#contact">Start a project</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 01 HERO -->
+    <section class="hero" id="top">
+      <div class="wrap heroGrid">
+        <div class="heroCopy">
+          <p class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span>Spline focused portfolio</p>
+          <h1 class="reveal">Work that moves in every dimension</h1>
+          <p class="lede reveal">Studio Cards helps independent designers present interactive concepts, product stories and playful prototypes in one fast page. Replace the scenes, add your cases, ship it.</p>
+          <div class="ctaRow reveal">
+            <a class="btn" href="#work">View selected work</a>
+            <a class="btn ghost" href="#contact">Book intro call</a>
+          </div>
+          <dl class="heroMeta reveal">
+            <div><dt>Availability</dt><dd>Open for November</dd></div>
+            <div><dt>Base</dt><dd>Remote worldwide</dd></div>
+            <div><dt>Reply time</dt><dd>Within 24 hours</dd></div>
+          </dl>
+        </div>
+        <div class="stageCard reveal" id="heroStage">
+          <div class="stageTop">
+            <span class="live"><span class="liveDot" aria-hidden="true"></span>Live scene</span>
+            <span class="stageTag">Drag to explore</span>
+          </div>
+          <div class="stage" id="splineStage">
+            <spline-viewer id="heroViewer" loading="eager" url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"></spline-viewer>
+            <canvas id="fallback" aria-hidden="true"></canvas>
+            <p class="fallbackNote" id="fallbackNote">Interactive preview loading</p>
+          </div>
+          <div class="stageBottom">
+            <p><strong>Nova Orbit</strong><span>Product hero concept · built in Spline</span></p>
+            <a href="#work">See process</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 WORK -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="secHead reveal">
+          <div>
+            <p class="kicker">Selected work</p>
+            <h2>Six cases built to win trust</h2>
+          </div>
+          <p class="secSub">Filter by focus. Every card tilts in 3D on desktop and stays calm on touch devices.</p>
+        </div>
+        <div class="filters reveal" role="group" aria-label="Filter work by focus">
+          <button class="chip on" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="interactive" type="button">Interactive</button>
+          <button class="chip" data-filter="web" type="button">Web</button>
+          <button class="chip" data-filter="brand" type="button">Brand</button>
+        </div>
+        <div class="grid" id="cardGrid">
+          <article class="card reveal" data-tags="interactive" data-tilt>
+            <div class="art art1" aria-hidden="true"><div class="cube"><i class="f f1"></i><i class="f f2"></i><i class="f f3"></i></div><div class="shadow"></div></div>
+            <div class="cardBody">
+              <p class="tag">Interactive</p>
+              <h3>Orbit product tour</h3>
+              <p>A guided tour with hotspots, camera moves and sound free motion for onboarding.</p>
+              <div class="cardFoot"><span>4 scenes · 2 weeks</span><span class="open">Open case</span></div>
+            </div>
+          </article>
+          <article class="card reveal" data-tags="web" data-tilt>
+            <div class="art art2" aria-hidden="true"><div class="orb"></div><div class="ring r1"></div><div class="ring r2"></div></div>
+            <div class="cardBody">
+              <p class="tag">Web</p>
+              <h3>Pulse launch site</h3>
+              <p>Landing page with an embedded hero scene plus scroll synced camera cuts.</p>
+              <div class="cardFoot"><span>Site · 3 weeks</span><span class="open">Open case</span></div>
+            </div>
+          </article>
+          <article class="card reveal" data-tags="brand" data-tilt>
+            <div class="art art3" aria-hidden="true"><div class="pyr"></div><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
+            <div class="cardBody">
+              <p class="tag">Brand</p>
+              <h3>Forma identity in motion</h3>
+              <p>Logo system and color set extended into looping motion stickers and covers.</p>
+              <div class="cardFoot"><span>Identity · 10 days</span><span class="open">Open case</span></div>
+            </div>
+          </article>
+          <article class="card reveal" data-tags="interactive web" data-tilt>
+            <div class="art art4" aria-hidden="true"><div class="stack"><i></i><i></i><i></i><i></i></div></div>
+            <div class="cardBody">
+              <p class="tag">Interactive · Web</p>
+              <h3>Atlas configurator</h3>
+              <p>Color and layout picker with instant 3D feedback and shareable states.</p>
+              <div class="cardFoot"><span>Tool · 4 weeks</span><span class="open">Open case</span></div>
+            </div>
+          </article>
+          <article class="card reveal" data-tags="brand interactive" data-tilt>
+            <div class="art art5" aria-hidden="true"><div class="donut"></div><div class="sat"></div></div>
+            <div class="cardBody">
+              <p class="tag">Brand · Interactive</p>
+              <h3>Lumen event loop</h3>
+              <p>Stage visuals and countdown loops for a two day design summit in Berlin.</p>
+              <div class="cardFoot"><span>Event · 12 loops</span><span class="open">Open case</span></div>
+            </div>
+          </article>
+          <article class="card reveal" data-tags="web brand" data-tilt>
+            <div class="art art6" aria-hidden="true"><div class="prism"></div><div class="beam"></div></div>
+            <div class="cardBody">
+              <p class="tag">Web · Brand</p>
+              <h3>Field notes journal</h3>
+              <p>Editorial template with tilt covers, reading progress and calm typography.</p>
+              <div class="cardFoot"><span>Template · 1 week</span><span class="open">Open case</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="empty" id="emptyMsg" hidden>No cases match this view yet. Try another focus.</p>
+      </div>
+    </section>
+
+    <!-- 03 SERVICES -->
+    <section class="section alt" id="services">
+      <div class="wrap">
+        <div class="secHead reveal">
+          <div>
+            <p class="kicker">Services</p>
+            <h2>Clear scope, fast delivery</h2>
+          </div>
+          <p class="secSub">Three fixed offers. Pick one, get a prototype in days, launch in weeks.</p>
+        </div>
+        <div class="twoCol">
+          <div class="servList">
+            <div class="serv reveal">
+              <span class="num">01</span>
+              <div><h3>Spline scenes</h3><p>Hero moments, tours and configurators modeled, lit and optimized for web.</p><p class="includes">Includes: model, light, motion, export</p></div>
+            </div>
+            <div class="serv reveal">
+              <span class="num">02</span>
+              <div><h3>Launch pages</h3><p>Single page sites with embedded 3D, CMS ready copy and analytics wired.</p><p class="includes">Includes: design, build, CMS, QA</p></div>
+            </div>
+            <div class="serv reveal">
+              <span class="num">03</span>
+              <div><h3>Motion identity</h3><p>Logo, type and color extended into loops, stickers and social covers.</p><p class="includes">Includes: logo, type, palette, loops</p></div>
+            </div>
+          </div>
+          <div class="stats reveal" aria-label="Studio stats">
+            <div class="stat"><strong><span data-count="48">0</span></strong><span>Projects shipped</span></div>
+            <div class="stat"><strong><span data-count="12">0</span></strong><span>Awards and mentions</span></div>
+            <div class="stat"><strong><span data-count="97">0</span></strong><span>Client satisfaction</span></div>
+            <div class="stat"><strong><span data-count="9">0</span></strong><span>Years of practice</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap twoCol">
+        <div class="contactInfo reveal">
+          <p class="kicker">Contact</p>
+          <h2>Tell me about your launch</h2>
+          <p class="secSub">Share scope, timeline and budget. You get a reply with next steps and a fixed quote.</p>
+          <ul class="points">
+            <li><strong>Mail</strong><span>hello@studiocards.design</span></li>
+            <li><strong>Studio</strong><span>Remote · calls in your timezone</span></li>
+            <li><strong>Social</strong><span>Spline · Dribbble · Read.cv</span></li>
+          </ul>
+        </div>
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="fName">Name</label>
+            <input id="fName" name="name" type="text" placeholder="Ada Lovelace" autocomplete="name">
+            <small data-err="fName"></small>
+          </div>
+          <div class="field">
+            <label for="fMail">Email</label>
+            <input id="fMail" name="email" type="email" placeholder="ada@studio.com" autocomplete="email">
+            <small data-err="fMail"></small>
+          </div>
+          <div class="field">
+            <label for="fBudget">Budget</label>
+            <select id="fBudget" name="budget">
+              <option value="">Choose a range</option>
+              <option>Under 2k</option>
+              <option>2k to 5k</option>
+              <option>5k to 10k</option>
+              <option>10k plus</option>
+            </select>
+            <small data-err="fBudget"></small>
+          </div>
+          <div class="field">
+            <label for="fMsg">Project notes</label>
+            <textarea id="fMsg" name="message" rows="4" placeholder="Goal, timeline, links to references"></textarea>
+            <small data-err="fMsg"></small>
+          </div>
+          <button class="btn full" type="submit">Send message</button>
+          <p class="ok" id="formOk" role="status" hidden>Thanks. Your note is ready. I reply within one business day.</p>
+        </form>
+      </div>
+      <div class="wrap">
+        <footer class="foot reveal">
+          <a class="brand" href="../index.html"><span class="dot" aria-hidden="true"></span><span>Studio Cards</span></a>
+          <p>Template 03 · Static demo · <span id="year">2026</span></p>
+          <a href="#top">Back to top</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

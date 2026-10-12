@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nebula Hero | Spline 3D Hero Template</title>
+<meta name="description" content="Nebula Hero is a Spline focused hero template to ship a 3D landing fast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script async src="https://unpkg.com/es-module-shims@1.8.2/dist/es-module-shims.js"></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1/build/spline-viewer.js"></script>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="navInner">
+    <a class="brand" href="#top" aria-label="Nebula Hero home">
+      <span class="brandMark" aria-hidden="true"></span>
+      <span class="brandText">Nebula Hero</span>
+    </a>
+    <nav class="navLinks" id="navLinks" aria-label="Primary">
+      <a href="#showcase">Showcase</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a class="hubLink" href="../index.html">All templates</a>
+    </nav>
+    <div class="navActions">
+      <a class="btn btnSmall btnGhost" href="../index.html">Back to hub</a>
+      <a class="btn btnSmall btnCoral" href="#contact">Get template</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobileMenu" id="mobileMenu" hidden>
+    <a href="#showcase">Showcase</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+    <a href="../index.html">All templates</a>
+    <a class="btn btnCoral" href="#contact">Get template</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="heroGrid">
+      <div class="heroCopy">
+        <p class="eyebrow reveal"><span class="dot"></span>Spline native hero template</p>
+        <h1 class="reveal">Ship a stunning 3D hero in one afternoon</h1>
+        <p class="lede reveal">Nebula Hero pairs a full width Spline stage with smooth scroll and cinematic reveals. Drop in your scene, edit copy, launch.</p>
+        <div class="ctaRow reveal">
+          <a class="btn btnCoral btnLarge" href="#contact">Start with Nebula</a>
+          <a class="btn btnOutline btnLarge" href="#showcase">View live scene</a>
+        </div>
+        <dl class="stats reveal">
+          <div class="stat">
+            <dt>Load time</dt>
+            <dd>1.2s</dd>
+          </div>
+          <div class="stat">
+            <dt>Scenes shipped</dt>
+            <dd>2.4k</dd>
+          </div>
+          <div class="stat">
+            <dt>Rating</dt>
+            <dd>4.9 / 5</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="stageWrap reveal">
+        <div class="stage" id="stage">
+          <div class="stageTop">
+            <span class="pillLive"><span class="pulse"></span>Live Spline scene</span>
+            <span class="stageUrl">nebula.spline</span>
+          </div>
+          <spline-viewer id="splineViewer" loading="eager" url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"></spline-viewer>
+          <canvas id="fallbackCanvas" class="fallbackCanvas" hidden aria-hidden="true"></canvas>
+          <div class="stageFallback" id="stageFallback" hidden>
+            <p class="fallbackTitle">3D preview offline</p>
+            <p class="fallbackText">Showing lightweight canvas preview. Your Spline scene will appear when online.</p>
+          </div>
+          <div class="stageBottom">
+            <span>Drag to orbit</span>
+            <span>Scroll to explore</span>
+          </div>
+        </div>
+        <div class="stageCards">
+          <div class="miniCard">
+            <strong>60 fps</strong>
+            <span>Smooth on mobile</span>
+          </div>
+          <div class="miniCard">
+            <strong>Lenis + GSAP</strong>
+            <span>Motion included</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="logos" id="showcase" aria-label="Showcase">
+    <p class="logosLabel reveal">Trusted by teams shipping interactive launches</p>
+    <div class="logoRow reveal" role="list">
+      <span role="listitem">Vertex</span>
+      <span role="listitem">Orbital</span>
+      <span role="listitem">Lumen Labs</span>
+      <span role="listitem">Craftbox</span>
+      <span role="listitem">Northwind</span>
+      <span role="listitem">Pixelflow</span>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="sectionHead reveal">
+      <p class="eyebrow"><span class="dot"></span>Why Nebula</p>
+      <h2>Everything you need for a 3D launch</h2>
+      <p>Three focused blocks. No bloat. Just the pieces that make a hero feel alive.</p>
+    </div>
+    <div class="cardGrid">
+      <article class="card reveal">
+        <div class="iconBubble" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z" stroke="#FF6B57" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 11L4 6.5M12 11l8-4.5M12 11v9" stroke="#FF6B57" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Instant Spline embed</h3>
+        <p>Paste any public Spline URL and the hero stage adapts. Solid fallback keeps layout intact when offline.</p>
+        <span class="cardLink">See stage setup</span>
+      </article>
+      <article class="card reveal">
+        <div class="iconBubble" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12c2.5-4 5.5-6 9-6s6.5 2 9 6c-2.5 4-5.5 6-9 6s-6.5-2-9-6z" stroke="#FF6B57" stroke-width="1.8"/><circle cx="12" cy="12" r="2.4" fill="#FF6B57"/></svg>
+        </div>
+        <h3>Motion that feels native</h3>
+        <p>Lenis smooth scroll plus GSAP intro and scroll reveals tuned for 3D. Respects reduced motion by default.</p>
+        <span class="cardLink">Preview motion</span>
+      </article>
+      <article class="card reveal">
+        <div class="iconBubble" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="#FF6B57" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Performance first</h3>
+        <p>Static files only. No build step. Guarded CDN scripts so copy and layout always render fast.</p>
+        <span class="cardLink">Check structure</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA + CONTACT -->
+  <section class="closing" id="contact">
+    <div class="closingGrid">
+      <div class="ctaPanel reveal">
+        <p class="eyebrow eyebrowDark"><span class="dot dotDark"></span>Ready to launch</p>
+        <h2>Make your hero unforgettable</h2>
+        <p class="ctaText">Clone this template, swap the Spline URL, update three cards. You are live before lunch.</p>
+        <ul class="checkList">
+          <li>Static files, works on GitHub Pages</li>
+          <li>Responsive at 360, 768 and 1200</li>
+          <li>Accessible motion and contrast</li>
+        </ul>
+        <div class="ctaRow">
+          <a class="btn btnNavy btnLarge" href="#top">Back to top</a>
+          <a class="btn btnOutlineDark btnLarge" href="../index.html">Browse all templates</a>
+        </div>
+      </div>
+      <div class="formPanel reveal">
+        <h3>Request this template</h3>
+        <p class="formSub">Tell us where to send the files. We reply within one business day.</p>
+        <form id="contactForm" novalidate>
+          <label>Your name
+            <input type="text" id="fName" name="name" placeholder="Ada Lovelace" autocomplete="name">
+            <small class="err" id="errName" hidden>Please enter your name.</small>
+          </label>
+          <label>Email address
+            <input type="email" id="fEmail" name="email" placeholder="you@studio.com" autocomplete="email">
+            <small class="err" id="errEmail" hidden>Please enter a valid email.</small>
+          </label>
+          <label>Project note
+            <textarea id="fMsg" name="message" rows="4" placeholder="I want a 3D hero for our launch next month."></textarea>
+            <small class="err" id="errMsg" hidden>Please add a short note, at least 10 characters.</small>
+          </label>
+          <button class="btn btnCoral btnLarge btnFull" type="submit">Send request</button>
+          <p class="formOk" id="formOk" role="status" hidden>Thanks. Your request was received. Check your inbox soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footInner">
+    <div class="footBrand">
+      <span class="brandMark" aria-hidden="true"></span>
+      <span>Nebula Hero</span>
+    </div>
+    <p class="footNote">A Spline 3D hero template. Part of the template collection.</p>
+    <nav class="footLinks" aria-label="Footer">
+      <a href="#hero">Top</a>
+      <a href="#features">Features</a>
+      <a href="../index.html">All templates</a>
+    </nav>
+    <p class="footCopy">© 2026 Nebula Studio. Built with Sora, Lenis and GSAP.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

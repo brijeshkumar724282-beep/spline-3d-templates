@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Stage | Spline Product Showcase</title>
+<meta name="description" content="Shop Stage product showcase template with Spline 3D stage, variants, pricing and order form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1/build/spline-viewer.js"></script>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="navinner">
+    <a class="brand" href="../index.html" aria-label="Back to template hub">
+      <span class="brandmark" aria-hidden="true"></span>
+      <span>Shop Stage</span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="Primary">
+      <a href="#highlights">Highlights</a>
+      <a href="#specs">Specs</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#order">Order</a>
+      <a class="backlink" href="../index.html">Back to hub</a>
+    </nav>
+    <div class="navactions">
+      <a class="btn btnsmall btndark" href="#order">Buy now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap heroGrid">
+    <div class="heroCopy">
+      <p class="eyebrow">Template 04 · Single product showcase</p>
+      <h1>Sell one product on a stage built for focus</h1>
+      <p class="lede">Shop Stage pairs a live 3D product stage with clear pricing and a short order flow so visitors see the product, pick a style, and buy.</p>
+      <div class="variants" role="group" aria-label="Choose a finish">
+        <button class="variant isActive" data-variant="porcelain" data-frame="#FFFFFF" data-glow="#4F46E5" aria-pressed="true">
+          <span class="dot dotPorcelain" aria-hidden="true"></span>Porcelain
+        </button>
+        <button class="variant" data-variant="graphite" data-frame="#111318" data-glow="#4F46E5" aria-pressed="false">
+          <span class="dot dotGraphite" aria-hidden="true"></span>Graphite
+        </button>
+        <button class="variant" data-variant="indigo" data-frame="#4F46E5" data-glow="#111318" aria-pressed="false">
+          <span class="dot dotIndigo" aria-hidden="true"></span>Indigo
+        </button>
+      </div>
+      <div class="priceCard" id="priceCard">
+        <div>
+          <p class="priceLabel">Aura Chair <span id="variantName">Porcelain</span></p>
+          <p class="price"><span id="priceValue">$349</span> <span class="priceNote">Free shipping over $150</span></p>
+          <p class="rating" aria-label="Rated 4.9 out of 5 from 2,140 reviews">
+            <span aria-hidden="true">★★★★★</span> 4.9 · 2,140 reviews
+          </p>
+        </div>
+        <div class="priceCtas">
+          <a class="btn btnprimary" href="#order">Add to cart</a>
+          <a class="btn btnghost" href="#highlights">See highlights</a>
+        </div>
+      </div>
+      <ul class="heroTicks">
+        <li>Live 3D stage with drag to rotate</li>
+        <li>30 day returns</li>
+        <li>2 year warranty</li>
+      </ul>
+    </div>
+    <div class="stageCol">
+      <div class="stageFrame" id="stageFrame">
+        <div class="stageTop">
+          <span class="stagePill" id="stagePill">Porcelain finish</span>
+          <span class="stageLive"><span class="liveDot" aria-hidden="true"></span>Live 3D</span>
+        </div>
+        <div class="stageView" id="stageView">
+          <spline-viewer id="splineEl" url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"></spline-viewer>
+          <canvas id="fallbackCanvas" class="fallback" hidden aria-label="Product preview illustration"></canvas>
+          <p class="stageFallbackNote" id="splineNote" hidden>Showing illustrated preview while 3D loads.</p>
+        </div>
+        <div class="stageBottom">
+          <p>Drag to explore the product in space</p>
+          <div class="stageDots" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <p class="stageHint">Tip: use the finish buttons to restyle this frame instantly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS dark -->
+<section class="dark" id="highlights">
+  <div class="wrap">
+    <p class="eyebrow eyebrowLight">Highlights</p>
+    <h2>Three reasons it earns its place in your room</h2>
+    <p class="sectionSub">Scroll gently. Each card rises into view with a soft scrub motion.</p>
+    <div class="hlGrid">
+      <article class="hlCard" data-scrub>
+        <p class="hlNum">01</p>
+        <h3>Sculpted for comfort</h3>
+        <p>Curved back support and a deep seat cushion keep long evenings easy and relaxed.</p>
+      </article>
+      <article class="hlCard" data-scrub>
+        <p class="hlNum">02</p>
+        <h3>Built to last</h3>
+        <p>Solid frame, stain resistant fabric, and replaceable parts extend product life for years.</p>
+      </article>
+      <article class="hlCard" data-scrub>
+        <p class="hlNum">03</p>
+        <h3>Easy to assemble</h3>
+        <p>Four parts and one tool. Most people finish setup in under twelve minutes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs" id="specs">
+  <div class="wrap">
+    <p class="eyebrow">Specs</p>
+    <h2>Numbers that back up the design</h2>
+    <div class="counterGrid">
+      <div class="counter"><p class="counterNum"><span data-count="140">0</span>kg</p><p class="counterLabel">Max load tested daily</p></div>
+      <div class="counter"><p class="counterNum"><span data-count="12">0</span>min</p><p class="counterLabel">Average assembly time</p></div>
+      <div class="counter"><p class="counterNum"><span data-count="98">0</span>%</p><p class="counterLabel">Recyclable packaging</p></div>
+      <div class="counter"><p class="counterNum"><span data-count="2140">0</span></p><p class="counterLabel">Verified buyer reviews</p></div>
+    </div>
+    <div class="specTable">
+      <div><p>Materials</p><span>Solid ash frame plus woven textile</span></div>
+      <div><p>Dimensions</p><span>72 wide · 78 deep · 84 high cm</span></div>
+      <div><p>Weight</p><span>14.2 kg boxed</span></div>
+      <div><p>Care</p><span>Wipe clean, covers machine washable</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING dark -->
+<section class="dark" id="pricing">
+  <div class="wrap">
+    <p class="eyebrow eyebrowLight">Pricing</p>
+    <h2>Pick the bundle that fits your space</h2>
+    <p class="sectionSub sectionSubLight">One product, three simple ways to buy. Prices update the order form below.</p>
+    <div class="tierGrid">
+      <article class="tier">
+        <h3>Essential</h3>
+        <p class="tierPrice">$349</p>
+        <p class="tierDesc">The chair in your chosen finish with standard legs.</p>
+        <ul><li>Chair in 3 finishes</li><li>Standard ash legs</li><li>Free 30 day returns</li></ul>
+        <button class="btn btnlight" data-tier="Essential" data-price="349">Choose Essential</button>
+      </article>
+      <article class="tier tierFeatured">
+        <p class="tierFlag">Most popular</p>
+        <h3>Comfort Plus</h3>
+        <p class="tierPrice">$429</p>
+        <p class="tierDesc">Extra cushion set plus premium fabric protection.</p>
+        <ul><li>Everything in Essential</li><li>Lumbar cushion set</li><li>Fabric protection coat</li></ul>
+        <button class="btn btnprimary" data-tier="Comfort Plus" data-price="429">Choose Comfort Plus</button>
+      </article>
+      <article class="tier">
+        <h3>Room Set</h3>
+        <p class="tierPrice">$599</p>
+        <p class="tierDesc">Chair plus matching footrest and side table.</p>
+        <ul><li>Everything in Comfort Plus</li><li>Matching footrest</li><li>Oak side table</li></ul>
+        <button class="btn btnlight" data-tier="Room Set" data-price="599">Choose Room Set</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order" id="order">
+  <div class="wrap orderGrid">
+    <div>
+      <p class="eyebrow">Order</p>
+      <h2>Reserve yours in under a minute</h2>
+      <p class="sectionSub">Fill in the form. Validation happens inline so errors are clear before you submit.</p>
+      <div class="orderSummary" id="orderSummary" aria-live="polite">
+        <p>Selected bundle: <strong id="summaryTier">Comfort Plus</strong></p>
+        <p>Total due today: <strong id="summaryPrice">$429</strong></p>
+      </div>
+    </div>
+    <form id="orderForm" novalidate>
+      <div class="field">
+        <label for="fName">Full name</label>
+        <input id="fName" name="name" type="text" autocomplete="name" placeholder="Ada Stone">
+        <p class="error" data-error="fName" hidden>Please enter your name.</p>
+      </div>
+      <div class="field">
+        <label for="fEmail">Email</label>
+        <input id="fEmail" name="email" type="email" autocomplete="email" placeholder="ada@example.com">
+        <p class="error" data-error="fEmail" hidden>Please enter a valid email.</p>
+      </div>
+      <div class="fieldRow">
+        <div class="field">
+          <label for="fVariant">Finish</label>
+          <select id="fVariant" name="variant">
+            <option>Porcelain</option>
+            <option>Graphite</option>
+            <option>Indigo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fQty">Quantity</label>
+          <input id="fQty" name="qty" type="number" min="1" max="9" value="1">
+          <p class="error" data-error="fQty" hidden>Choose 1 to 9.</p>
+        </div>
+      </div>
+      <button class="btn btnprimary btnFull" type="submit">Place order</button>
+      <p class="formOk" id="formOk" hidden>Thanks. Your order was received. A confirmation email is on its way.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footGrid">
+    <p><strong>Shop Stage</strong> · Template 04 in the Spline 3D Templates collection.</p>
+    <nav aria-label="Footer"><a href="../index.html">Back to hub</a><a href="#hero">Top of page</a></nav>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

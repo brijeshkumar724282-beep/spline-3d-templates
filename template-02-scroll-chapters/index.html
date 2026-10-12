@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Chapters | Explain Your Product In Three Steps</title>
+<meta name="description" content="A scroll story template with a sticky 3D stage and three chapters to explain your product.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1/build/spline-viewer.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<a class="skip" href="#chapters">Skip to chapters</a>
+
+<header class="nav" id="top">
+  <div class="navInner">
+    <a class="brand" href="../index.html" aria-label="Back to template hub">
+      <span class="brandMark" aria-hidden="true"></span>
+      <span class="brandText">Chapters<small>Scroll Story Template</small></span>
+    </a>
+    <nav class="navLinks" id="navLinks" aria-label="Page sections">
+      <a href="#intro">Intro</a>
+      <a href="#chapter1">One</a>
+      <a href="#chapter2">Two</a>
+      <a href="#chapter3">Three</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="navCta">Contact</a>
+    </nav>
+    <div class="navRight">
+      <a class="backLink" href="../index.html">Back to hub</a>
+      <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="dots" aria-label="Chapter progress">
+  <a href="#intro" data-dot="intro" class="isActive" aria-label="Go to intro"><i></i></a>
+  <a href="#chapter1" data-dot="chapter1" aria-label="Go to chapter one"><i></i></a>
+  <a href="#chapter2" data-dot="chapter2" aria-label="Go to chapter two"><i></i></a>
+  <a href="#chapter3" data-dot="chapter3" aria-label="Go to chapter three"><i></i></a>
+  <a href="#gallery" data-dot="gallery" aria-label="Go to gallery"><i></i></a>
+</aside>
+
+<main>
+  <section class="hero" id="intro">
+    <div class="heroGrid">
+      <div class="heroCopy">
+        <p class="eyebrow"><span class="eyebrowDot"></span>Template 02 · Scroll story · Spline stage</p>
+        <h1>Explain your product in three clear steps.</h1>
+        <p class="lede">Scroll Chapters pairs a sticky 3D panel with short text cards. Visitors read one idea at a time while the visual reacts to scroll. Clean, calm and easy to reuse.</p>
+        <div class="heroActions">
+          <a class="btn solid" href="#chapter1">Start with chapter one</a>
+          <a class="btn ghost" href="#gallery">See the gallery</a>
+        </div>
+        <dl class="heroMeta">
+          <div><dt>03</dt><dd>Chapters included</dd></div>
+          <div><dt>01</dt><dd>Sticky 3D stage</dd></div>
+          <div><dt>04</dt><dd>Gallery cards</dd></div>
+        </dl>
+      </div>
+      <div class="heroCard" aria-hidden="true">
+        <div class="heroCardTop"><span></span><span></span><span></span></div>
+        <p class="heroCardTitle">How it works</p>
+        <ol>
+          <li><strong>01</strong> Set the scene up top</li>
+          <li><strong>02</strong> Tell one story per chapter</li>
+          <li><strong>03</strong> Close with a clear invite</li>
+        </ol>
+        <p class="heroHint">Scroll slowly. The stage tilts as you move.</p>
+      </div>
+    </div>
+    <p class="scrollHint" aria-hidden="true"><span class="scrollLine"></span>Scroll to begin</p>
+  </section>
+
+  <div class="story" id="chapters">
+    <div class="stageCol">
+      <div class="stageSticky">
+        <div class="stageFrame" id="stageFrame">
+          <div class="stageBar">
+            <p id="stageLabel">Chapter 01 of 03</p>
+            <p class="stageLive"><span class="liveDot"></span>Live 3D</p>
+          </div>
+          <div class="stageView" id="stageView">
+            <spline-viewer id="splineEl" url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"></spline-viewer>
+            <canvas id="fallbackCanvas" class="fallbackCanvas" hidden aria-hidden="true"></canvas>
+            <div class="stageFallback" id="stageFallback" role="status">
+              <p class="fallbackTitle">Loading 3D scene</p>
+              <p class="fallbackText">A dotted visual appears here if 3D takes too long.</p>
+            </div>
+          </div>
+          <div class="stageFoot">
+            <div class="progress"><span id="progressFill"></span></div>
+            <p id="stageCaption">A calm object view for chapter one.</p>
+          </div>
+        </div>
+        <p class="stageNote">Tip: replace the scene URL in index.html with your own Spline link.</p>
+      </div>
+    </div>
+
+    <div class="chaptersCol">
+      <article class="chapter" id="chapter1" data-index="0" data-caption="A calm object view for chapter one.">
+        <p class="chapNum">Chapter 01</p>
+        <h2>Show the moment it clicks</h2>
+        <p>Open with the result people want. One picture, one promise, one clear reason to keep reading. Keep this card short and visual.</p>
+        <ul class="checkList">
+          <li>Name the outcome in plain words</li>
+          <li>Show it in the 3D stage beside this text</li>
+          <li>End with a single next idea</li>
+        </ul>
+        <p class="tagRow"><span>Outcome</span><span>Visual first</span></p>
+      </article>
+
+      <article class="chapter" id="chapter2" data-index="1" data-caption="A closer look at how it works inside.">
+        <p class="chapNum">Chapter 02</p>
+        <h2>Walk through how it works</h2>
+        <p>Break the middle into two or three small moves. Readers should feel guided, never rushed. Each line earns the next scroll.</p>
+        <ul class="checkList">
+          <li>Step A: set things up in seconds</li>
+          <li>Step B: shape it to fit your needs</li>
+          <li>Step C: share it with your team</li>
+        </ul>
+        <p class="tagRow"><span>Process</span><span>Guided tour</span></p>
+      </article>
+
+      <article class="chapter" id="chapter3" data-index="2" data-caption="A confident closing view with room to act.">
+        <p class="chapNum">Chapter 03</p>
+        <h2>End with proof and a next move</h2>
+        <p>Close with trust. A short quote, a small stat and one button is enough. Tell people exactly what happens after they reach out.</p>
+        <blockquote>“We explained our whole product in one page. Calls got shorter and clearer.”</blockquote>
+        <p class="quoteBy">Maya R, Product Lead</p>
+        <a class="btn solid" href="#contact">Plan your visit</a>
+      </article>
+    </div>
+  </div>
+
+  <section class="gallery" id="gallery">
+    <div class="sectionHead">
+      <p class="eyebrow"><span class="eyebrowDot"></span>Gallery</p>
+      <h2>Four solid cards for proof and detail</h2>
+      <p>Swap these with screenshots, photos or short stats. Solid colors keep the page calm next to the 3D stage.</p>
+    </div>
+    <div class="strip">
+      <article class="gCard teal">
+        <p class="gNum">A</p>
+        <h3>Launch view</h3>
+        <p>Show the home screen or hero moment of your product.</p>
+      </article>
+      <article class="gCard ink">
+        <p class="gNum">B</p>
+        <h3>Detail view</h3>
+        <p>Zoom into the part people love to touch and use.</p>
+      </article>
+      <article class="gCard sand">
+        <p class="gNum">C</p>
+        <h3>People view</h3>
+        <p>Add a customer quote or a team photo for warmth.</p>
+      </article>
+      <article class="gCard clay">
+        <p class="gNum">D</p>
+        <h3>Data view</h3>
+        <p>Share one number that proves steady progress.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contactGrid">
+      <div>
+        <p class="eyebrow"><span class="eyebrowDot"></span>Contact</p>
+        <h2>Tell us what you want to explain</h2>
+        <p>Send a short note. We reply within two work days with ideas and next steps. No long forms, no waiting.</p>
+        <ul class="contactList">
+          <li><strong>Studio</strong><span>14 Meadow Lane, Portland</span></li>
+          <li><strong>Email</strong><span>hello@example.com</span></li>
+          <li><strong>Hours</strong><span>Mon to Fri, 9 to 5</span></li>
+        </ul>
+      </div>
+      <form id="contactForm" novalidate>
+        <label>Your name
+          <input type="text" name="name" id="fName" placeholder="Ada Lovelace" autocomplete="name">
+          <small class="err" id="eName"></small>
+        </label>
+        <label>Your email
+          <input type="email" name="email" id="fEmail" placeholder="ada@example.com" autocomplete="email">
+          <small class="err" id="eEmail"></small>
+        </label>
+        <label>What should the story explain?
+          <textarea name="message" id="fMsg" rows="4" placeholder="Our app helps teams plan trips in three steps..."></textarea>
+          <small class="err" id="eMsg"></small>
+        </label>
+        <button class="btn solid" type="submit">Send message</button>
+        <p class="formOk" id="formOk" role="status" hidden>Thanks. Your note looks good. We will reply soon.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footInner">
+    <p><strong>Scroll Chapters</strong> · A Spline story template</p>
+    <p><a href="#top">Back to top</a> · <a href="../index.html">Back to hub</a></p>
+    <p class="fine">Built with solid color, Space Grotesk and scroll motion.</p>
+  </div>
+</footer>
+
+<script src="./script.js" defer></script>
+</body>
+</html>
